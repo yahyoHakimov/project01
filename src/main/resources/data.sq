@@ -1,0 +1,12 @@
+-- select * from product
+--     inner join detail d on product.id = d.product_id
+--     inner join orders o on o.id = d.ord_id
+--     inner join invoice i on o.id = i.order_id
+--     inner join payment p on i.id = p.invoice_id where
+--                                                       p.invoice_id = i.id and i.order_id = o.id and o.id = d.ord_id and d.product_id = p.id and p.id =: product_id
+-- -- select * from detail
+-- select d.quantity from product p inner join detail d on p.id = d.product_id where quantity > 8
+-- select i.id from customer c
+--     inner join orders o on c.id = o.customer_id
+--     inner join invoice i on o.id = i.order_id where o.date > to_date('01/01/2016', 'DD/MM/YYYY')  and o.date < to_date('31/12/2016','DD/MM/YYYY')
+-- select * from customer c inner join orders o on c.id = o.customer_id where date between to_date('01-01-2016','dd-mm-yyyy') and to_date('01-12-2016','dd-mm-yyyy') and c.id not in (select customer_id from orders)
